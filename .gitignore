@@ -1,0 +1,45 @@
+# Data
+data/
+
+# Model submissions / outputs
+submissions/
+
+# SSH keys (never commit these!)
+ssh_keys/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.tmp
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment & config
+.env
+*.env
+*.ini
+*.cfg
+
+# Model artifacts
+checkpoints/
+models/
+*.h5
+*.hdf5
+*.ckpt
+*.pb
+
+# Outputs
+outputs/
+predictions/
+wandb/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
