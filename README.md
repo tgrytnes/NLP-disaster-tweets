@@ -1,6 +1,6 @@
-# NLP Disaster Tweets – Week 4 Project
+# NLP Disaster Tweets – KaggleProject
 
-This repository contains my Week‑4 mini‑project for the **Kaggle "Natural Language Processing with Disaster Tweets"** competition.  
+This repository contains my Mini‑project for the **Kaggle "Natural Language Processing with Disaster Tweets"** competition.  
 The goal is to build a neural model that predicts whether a short tweet is about a **real disaster** or **not**.
 
 ## Project Overview
