@@ -24,7 +24,7 @@ The task is to build an NLP model that predicts whether a tweet refers to a **re
 ## Repository Structure
 - `Disaster_Tweets_Week4_BiLSTM_Report.ipynb` — Main notebook
 - `data/` — Dataset (ignored in `.gitignore`)
-- `submissions/` — Kaggle submissions (ignored)
+- `submission_glove_model.csv` — Kaggle submissions
 - `ssh_keys/` — Local SSH keys (ignored)
 
 ## License
