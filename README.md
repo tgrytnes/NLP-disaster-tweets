@@ -1,33 +1,34 @@
-# NLP Disaster Tweets – KaggleProject
+# NLP Disaster Tweets – Kaggle Mini-Project
 
-This repository contains my Mini‑project for the **Kaggle "Natural Language Processing with Disaster Tweets"** competition.  
-The goal is to build a neural model that predicts whether a short tweet is about a **real disaster** or **not**.
+This repository contains my mini-project for the **Kaggle "Natural Language Processing with Disaster Tweets"** competition.  
+The task is to build an NLP model that predicts whether a tweet refers to a **real disaster**.
 
 ## Project Overview
-- **Task:** Binary classification of tweets (`disaster` vs `non-disaster`)
+- **Task:** Binary text classification (`disaster` vs `non-disaster`)
 - **Dataset:** Kaggle-provided tweets with `text`, `keyword`, and `location`
-- **Model:** Bidirectional LSTM and GRU with learned embeddings
-- **Metric:** F1 score (primary), AUC and Accuracy for diagnostics
+- **Model:** Bidirectional LSTM with pretrained word embeddings (GloVe)
+- **Primary Metric:** F1 score (threshold-tuned)
+- **Secondary Metrics:** AUC, Accuracy
 
-## Key Steps
-1. **EDA:** Class balance, tweet lengths, feature sparsity.
-2. **Minimal cleaning:** lowercase; replace URLs→`<URL>`, mentions→`<USER>`; keep hashtag words; normalize punctuation.
-3. **Modeling:** Neural-only pipeline; tokenization/padding inside the model.
-4. **Evaluation:** Tune threshold on validation to maximize F1.
+## Approach
+1. **EDA:** Checked class balance, tweet length distribution, and keyword/location sparsity.
+2. **Minimal Cleaning:** Lowercased text; replaced URLs→`<URL>`, mentions→`<USER>`; stripped `#` from hashtags but kept the word; normalized punctuation.
+3. **Modeling:** Pretrained GloVe embeddings + Keras Tokenizer; sequences padded to fixed length; Bidirectional LSTM for context from both directions.
+4. **Evaluation:** Validation threshold tuned to maximize F1; AUC and Accuracy tracked for diagnostics.
 
-## Results (Sanity Run)
+## Results
 - **Val F1:** ~0.775 @ threshold 0.369  
 - **Val AUC:** ~0.868  
 - **Val Accuracy:** ~0.800  
 
-## Structure
+## Repository Structure
 - `Disaster_Tweets_Week4_BiLSTM_Report.ipynb` — Main notebook
 - `data/` — Dataset (ignored in `.gitignore`)
 - `submissions/` — Kaggle submissions (ignored)
 - `ssh_keys/` — Local SSH keys (ignored)
 
 ## License
-MIT License — see [LICENSE](LICENSE).
+MIT License — see [LICENSE](LICENSE)
 
 ## Author
 Thomas Fey-Grytnes
